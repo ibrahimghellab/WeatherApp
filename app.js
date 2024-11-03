@@ -6,6 +6,7 @@ let feelLike=document.getElementById("feelLike");
 let humidity=document.getElementById("humidity");
 let source=document.getElementById("src");
 
+let ip;
 
 
 const fahrenheitToCelsius=(degre)=>{
@@ -13,7 +14,15 @@ const fahrenheitToCelsius=(degre)=>{
 }
 
 const getAll=async(city)=>{
-    let request="https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/48.867,2.33?key=F35BBHUQQFCZ2EDBV78NKVA5Q";
+    let dataIP=await fetch("https://api.ipify.org/?format=json");
+    let responseIP=await dataIP.json();
+    let ip=responseIP.ip;
+    console.log(responseIP);
+    let requestLatLong=`http://ip-api.com/json/${ip}`
+    let dataLatLong=await fetch(requestLatLong);
+    let responseLatLong=await dataLatLong.json();
+    console.log(responseLatLong);
+    let request=`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${responseLatLong.lat},${responseLatLong.lon}?key=F35BBHUQQFCZ2EDBV78NKVA5Q`;
     let data=await fetch(request);
     let response= await data.json();
     console.log(response);
