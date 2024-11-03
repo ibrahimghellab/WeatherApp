@@ -29,8 +29,7 @@
 ### Setup
 
 1. 📂 Clone the repository or download the project files.
-2. Make sure to have a `style.css` file for styling.
-3. 🔑 Replace the API keys in `app.js` with your own:
+2. 🔑 Replace the API keys in `app.js` with your own:
    - `F35BBHUQQFCZ2EDBV78NKVA5Q` for Visual Crossing Weather API.
    - `WRLI16tJ5l4Y0hkzMlJKKg==iN6EaOCtq7QsI9jQ` for API Ninjas Geocoding API.
 
