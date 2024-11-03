@@ -1,0 +1,28 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    border: 2px solid lightgrey;
+    width: 60%;
+    
+}
+#othersInformations{
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+}
+#othersInformations>p{
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+
+}   
+#temperatureD>p{
+    text-align: center;
+}
+
+#getWeather{
+    background-color: lightskyblue;
+    border-radius: 4px;
+    border: 0px;
+}
