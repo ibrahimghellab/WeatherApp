@@ -1,6 +1,6 @@
 let getWeather=document.getElementById("getWeather");
 let dateP=document.getElementById("date");
-let emojiP=document.getElementById("emoji");
+let icon=document.getElementById("icon");
 let temperatureP=document.getElementById("temperature");
 let feelLike=document.getElementById("feelLike");
 let humidity=document.getElementById("humidity");
@@ -19,10 +19,10 @@ const getAll=async(city)=>{
     console.log(response);
     let date = new Date().toLocaleDateString();
     dateP.textContent=date;
-    emojiP.textContent="❄️";
+    icon.src=`img/${response.currentConditions.icon}.png`;
     temperatureP.textContent=fahrenheitToCelsius(response.currentConditions.temp)+"°C";
-    feelLike.textContent=fahrenheitToCelsius(response.currentConditions.feelslike)+"°C";
-    humidity.textContent=response.currentConditions.humidity+"%";
+    feelLike.textContent="Feel like : "+fahrenheitToCelsius(response.currentConditions.feelslike)+"°C";
+    humidity.textContent="Humidity : "+response.currentConditions.humidity+"%";
     source.textContent="Source : "+response.currentConditions.source;
 }
 
