@@ -1,28 +1,122 @@
-main{
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #A8D8EA, #7B9EAA);
+    color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+
+header {
+    background-color: #34495E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 4px;
-    border: 2px solid lightgrey;
-    width: 60%;
-    
+    justify-content: flex-start; 
+    padding: 10px; 
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%; 
 }
-#othersInformations{
-    display: flex;
-    flex-direction: center;
-    justify-content: space-between;
-}
-#othersInformations>p{
-    border: 2px solid lightgrey;
-    border-radius: 4px;
 
-}   
-#temperatureD>p{
+#divCity {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1; 
+    padding: 12px 15px; 
+    margin: 0 5px;
+    border: 2px solid #7B9EAA;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em; 
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #2980B9; 
+}
+
+button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em; 
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px; 
+}
+
+button:hover {
+    background-color: #3498DB;
+    transform: scale(1.05); 
+}
+
+#temperatureD {
     text-align: center;
 }
 
-#getWeather{
-    background-color: lightskyblue;
-    border-radius: 4px;
-    border: 0px;
+#temperatureD img {
+    width: 100px;
+    height: 100px;
+}
+
+#othersInformations {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #34495E;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#src {
+    font-size: 0.8em;
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5em; 
+    }
+
+    button {
+        font-size: 1em; 
+    }
+
+    input[type="text"] {
+        font-size: 0.9em; 
+    }
 }
